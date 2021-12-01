@@ -1,5 +1,32 @@
 # Changelog
 
+## 1.2.0
+
+* Évolution du système socio-fiscal.
+* Périodes concernées : à partir d 01/01/2020.
+* Zones impactées : 
+  - `variables/redevances.py`
+  - `variables/taxes.py`
+* Détails :
+  - Ajoute les input variables `surface_communale` et `surface_totale`.
+  - Ajoute les formules 2020 pour les RDCM aurifères et la taxe sur l'or en Guyane.
+    * Proratise les montants de redevances et taxe à la surface d'emprise sur la commune.
+  - Cette version représente le code du modèle employé pour la production de matrices fin 2020 (précisément en commit bdcdb7796e4a0f867fbf9ac498edc9b07b7f3c69).
+
+### 1.1.3
+
+* Correction d'un crash et amélioration technique.
+* Périodes concernées : toutes.
+* Zones impactées : 
+  - `openfisca_france_fiscalite_miniere/entities.py`
+  - `simulations/*`
+* Détails :
+  - Correction de CI : ajoute le nom de branche au nom de cache en CI afin de disposer d'un cache par branche.
+  - Ajoute la documentation de l'entité `societe`.
+  - Regroupe les fichiers de simulation de réforme RCM 2019-2020 dans `simulations/reformes/` et précise la documentation associée.
+  - Exclut les fichiers de test de la wheel du modèle.
+  - Supprime `.python-version` optionnel et produisant une erreur à la création d'environnement virtuel.
+
 ### 1.1.2 [#11](https://github.com/openfisca/openfisca-france-fiscalite-miniere/pull/11)
 
 * Correction d'un crash.
